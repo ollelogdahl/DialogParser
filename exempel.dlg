@@ -16,7 +16,7 @@ Här kommer en rolig historia:
 #  {End}
 
 [Money]
-Tack för pengarna, kom så går vi och köper [glass!;Wow]
+Tack för pengarna, kom så går vi och köper [Glass;Wow]!
 
 # Okej {End}
 
@@ -30,6 +30,7 @@ $Wow$
 
 
 // kommentarer
+
 // [Start] är vart programmet börjar [End] är vart det slutar
 // [] på ny rad är ett dialog fönster ett annat kan hoppa till.
 // {} visar vilket fönser vi ska hoppa till. {;} efter semikolon kan vi peka på 
