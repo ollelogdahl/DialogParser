@@ -1,0 +1,41 @@
+[Start]
+Hej, här börjar alltid alla program!
+# Okej {Ok}
+# Varför {Why}
+
+
+[Why]
+För de är så.
+# Jaja förlåt för jag frågade {Ok}
+
+[Ok]
+Här kommer en rolig historia:
+= [Lurad;Wow].
+
+# Haha roligt, här får du pengar gör nått roligt! [<IceCreamCost>;Cost] {Money; <PayForIceCream>}
+#  {End}
+
+[Money]
+Tack för pengarna, kom så går vi och köper [glass!;Wow]
+
+# Okej {End}
+
+
+
+$Cost$
+* 5
+
+$Wow$
+* 4
+
+
+// kommentarer
+// [Start] är vart programmet börjar [End] är vart det slutar
+// [] på ny rad är ett dialog fönster ett annat kan hoppa till.
+// {} visar vilket fönser vi ska hoppa till. {;} efter semikolon kan vi peka på 
+//	en funktion, som ifall returnerar sant tillåter att vi väljer alternativet.
+//	Ifall funktionen returnerar falskt, stannar vi på samma dialog.
+// <> är en variabel / funktion
+// [;] i en sträng visar ett ställe som ska ha annan formatering (annan färg)
+//	efter semikolon förklarar vi vilket format
+// $$ Deklarerar ett format, * avgör färg
