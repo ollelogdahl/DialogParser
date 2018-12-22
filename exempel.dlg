@@ -12,7 +12,7 @@ För de är så.
 Här kommer en rolig historia:
 = [Lurad;Wow].
 
-# Haha roligt, här får du pengar gör nått roligt! [<IceCreamCost>;Cost] {Money; <PayForIceCream>}
+# Haha roligt, här får du pengar! [<IceCreamCost>;Cost] {Money; <PayForIceCream>}
 #  {End}
 
 [Money]

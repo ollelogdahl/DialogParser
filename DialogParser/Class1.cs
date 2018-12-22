@@ -17,8 +17,15 @@ namespace DialogParser {
 		public DialogTree Load(string path) {
 			List<DialogElement> e = new List<DialogElement>();
 
-			StreamReader reader = new StreamReader(path);
-			string all = reader.ReadToEnd();
+			string[] lines = File.ReadAllLines(path);
+
+			for(int i = 0; i < lines.Length; i++) {
+				string line = lines[i];
+
+				if(line[0] == '[') {
+					
+				}
+			}
 
 			return new DialogTree(e.ToArray());
 		}
