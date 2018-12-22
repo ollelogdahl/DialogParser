@@ -1,6 +1,6 @@
 # ConsoleGameEngine
 ### C# Graphics Library for drawing graphics in Windows Command Prompt
-Olle Logdahl, 24 November 2018
+Olle Logdahl, 22 December 2018
 
 ---
 **DialogParser** is a C# library ...
