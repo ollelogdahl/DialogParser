@@ -1,0 +1,70 @@
+Grammatik regler ( EBNF )
+
+start	=	
+   {dialog}
+
+dialog	=	
+   "[" ident "]" 
+   string
+   resp
+   { resp }
+
+resp	=	
+   "#" string "{" ident "}
+		
+ident	=
+   letter { letter }
+string	=
+   alphanumeric { alphanumeric | punctuation | separator }
+
+EX
+------------------
+
+[Start]
+Hej, här börjar alltid alla program!
+# Okej {Ok}
+# Varför {Why}
+
+[Why]
+För de är så.
+# Jaja förlåt för jag frågade {Ok}
+
+[Ok]
+Okej, har väl inte så mycket mer att säga.
+
+# Hej då {End}
+# Kan du ta om allt? {Start}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EBNF - Full
+------------------
+program = {event} .
+
+dialog =
+	"[" ident "]"
+	text
+	{ response } .
+
+response =
+	"#" text"{" ident [";" scriptable] "}" .
+
+text =
+	ident ["$" scriptable ] { " " ident ["$" scriptable ] } .
+
+scriptable = 
+	"<" ident ">" .
