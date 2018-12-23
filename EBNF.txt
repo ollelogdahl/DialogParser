@@ -1,21 +1,23 @@
 Grammatik regler ( EBNF )
 
 start	=	
-   {dialog}
+   dialog {dialog}
 
 dialog	=	
-   "[" ident "]" 
+   "[" string "]" 
    string
    resp
    { resp }
 
 resp	=	
-   "#" string "{" ident "}
+   "#" string "{" string "}"
 		
-ident	=
-   letter { letter }
 string	=
-   alphanumeric { alphanumeric | punctuation | separator }
+   word { " " word }
+
+word	=
+   alphanumeric { alphanumeric | punctuation }
+
 
 EX
 ------------------

@@ -8,21 +8,15 @@ using DialogParser;
 
 namespace Example {
 	class Program {
+
+		
+
 		static void Main(string[] args) {
-			DialogTree tree = DialogTree.Load("exempel.dlg");
+			DialogTree tree = DialogTree.Load("exempel.txt");
 
-			string expression = @"
-[Start]
-Hej här börjar alltid alla program
-# Okej {Ok}
-# Varför {Why}
+			Console.WriteLine(tree.ToString());
 
-[Ok]
-Här ska programmet sluta
-# Hejdå {End}
-				";
-			var tokens = new Tokenizer().Scan(expression);
-			var parser = new Parser(tokens);
+			Console.ReadLine();
 		}
 	}
 }
